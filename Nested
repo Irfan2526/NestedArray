@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="us-en">
+<head>
+	<meta charset="utf-8">
+</head>
+<body>
+	<!--<script>
+		function sum(a,b)
+       {
+              if(arguments.length===1)
+              {
+                 return function(b2)
+                 {
+                    return function(b3)
+                    {
+                      let c=a+b2+b3;
+                      let d=a+b2;
+                     return `${c} and ${d}`
+                      
+                   }
+
+                 }
+              }
+          return a+b;
+       }
+       console.log(sum(1,2));
+       console.log(sum(10)(3));
+       console.log(sum(10)(3)(8));
+	</script>--->
+	<script>
+		let newArray = [];
+function arrayFlat(array){
+    for(let i = 0; i< array.length; i++){
+        if(!array[i].length) { newArray.push(array[i])};
+        arrayFlat(array[i]);
+    }
+    console.log(newArray);
+}
+let arrayData = [1,2,[3,4],[[5,6],7]];
+arrayFlat(arrayData);
+	</script>
+</body>
